@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+
+  <!-- compiled css output -->
+  <link href="css/ionic.app.css" rel="stylesheet">
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  <script src="js/controllers/about.js"></script>
+  <script src="js/controllers/towns.js"></script>
+  <script src="js/services/towns.js"></script>
+  <script src="js/controllers/townLines.js"></script>
+  <script src="js/services/townLines.js"></script>
+  <script src="js/controllers/lines.js"></script>
+  <script src="js/services/lines.js"></script>
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script>
+  document.addEventListener('click', function (e) {
+    e = e ||  window.event;
+    var element = e.target || e.srcElement;
+    if (element.tagName == 'A') {
+      if (element.href.length > 0 && element.href.indexOf('#') === -1 ) {
+        window.open(element.href, "_system", "location=yes");
+        e.preventDefault();
+      }
+    }
+  }, true);
+  </script>
+  </head>
+  <body ng-app="starter">
+
+  <ion-nav-bar class="bar-positive" title="BizkaiBus App">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-nav-view></ion-nav-view>
+
+
+  </body>
+  </html>
